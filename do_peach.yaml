@@ -10,6 +10,7 @@ stages:
       displayName: 'now lets do some calc'
       inputs:
         targetType: filePath
-        filePath: ./do_peach.sh
+        # filePath: ./do_peach.sh
+        filePath: do_peach.sh
 
 
