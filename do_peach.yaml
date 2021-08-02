@@ -1,0 +1,15 @@
+
+
+# Release Stages
+stages:
+- stage: some_cool_template
+  jobs:
+  - job: launch_template_rwanda
+    steps:
+    - task: Bash@3
+      displayName: 'now lets do some calc'
+      inputs:
+        targetType: filePath
+        filePath: ./do_peach.sh
+
+
