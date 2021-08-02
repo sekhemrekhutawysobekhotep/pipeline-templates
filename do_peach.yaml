@@ -1,5 +1,10 @@
 
 
+pool:
+  vmImage: 'ubuntu-latest'
+
+
+
 # Release Stages
 stages:
 - stage: some_cool_template
