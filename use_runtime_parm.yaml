@@ -1,0 +1,36 @@
+
+---
+variables:
+  - name: thickness
+    value: ${{ parameters.thickness }}
+
+parameters:
+  - name: thickness
+    displayName: Enter A Custom thickness
+    default: thick
+    values:
+      - thin
+      - meaty
+      - thick
+
+
+
+# Release Stages
+stages:
+- stage: checking on pipeline api
+  jobs:
+  - job: get this launched using api
+    steps:
+    - task: Bash@3
+      displayName: 'now lets do some calc'
+      inputs:
+        targetType: inline
+        script: |
+          echo OK start of calculations 
+          echo
+          echo "seeing thickness value of -->$thickness<-- "
+      env:
+        thickness: ${{ parameters.thickness }}
+
+
+
