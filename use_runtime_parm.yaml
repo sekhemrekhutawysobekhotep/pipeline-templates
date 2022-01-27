@@ -17,9 +17,9 @@ parameters:
 
 # Release Stages
 stages:
-- stage: checking on pipeline api
+- stage: checking_on_pipeline_api
   jobs:
-  - job: get this launched using api
+  - job: get_this_launched_using_api
     steps:
     - task: Bash@3
       displayName: 'now lets do some calc'
