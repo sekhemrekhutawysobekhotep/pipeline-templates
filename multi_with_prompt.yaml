@@ -24,6 +24,7 @@ resources:
       name: sekhemrekhutawysobekhotep/pipeline-templates
       # ref: develop
       ref: main
+      endpoint: sekhemrekhutawysobekhotep
 
 
 # Release Stages
