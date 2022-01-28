@@ -18,9 +18,10 @@ parameters:
 resources:
   repositories:
     - repository: templates
-      type: git
-      name: public_project/pipeline-templates
-      # name: sekhemrekhutawysobekhotep/pipeline-templates
+      # type: git
+      # name: public_project/pipeline-templates
+      type: github
+      name: sekhemrekhutawysobekhotep/pipeline-templates
       # ref: develop
       ref: main
 
