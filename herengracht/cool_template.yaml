@@ -62,6 +62,7 @@ stages:
                 displayName: Some Shell Goes Here
                 inputs:
                   scriptType: bash
+                  azureSubscription: 'eb51b472-472e-428b-9b8e-fb8c326e375a'
                   scriptLocation: inlineScript
                   inlineScript: |
                     set -e
