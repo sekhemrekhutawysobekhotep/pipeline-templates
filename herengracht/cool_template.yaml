@@ -52,6 +52,21 @@ stages:
         runOnce:
           deploy:
             # whatever
+            steps:
+              # - template: ../steps/foo-setup-steps.yaml
+              #   parameters:
+              #     some_parm_01: ${{ parameters.some_parm_01 }}
+              #     some_parm_02: ${{ parameters.some_parm }}
+
+              - task: AzureCLI@2
+                displayName: Some Shell Goes Here
+                inputs:
+                  scriptType: bash
+                  scriptLocation: inlineScript
+                  inlineScript: |
+                    set -e
+                    echo
+                    echo "hello middle ground"
 
   - stage: 'Approval required'
     jobs:
@@ -62,3 +77,18 @@ stages:
         runOnce:
           deploy:
             # whatever
+            steps:
+              # - template: ../steps/foo-setup-steps.yaml
+              #   parameters:
+              #     some_parm_01: ${{ parameters.some_parm_01 }}
+              #     some_parm_02: ${{ parameters.some_parm }}
+
+              - task: AzureCLI@2
+                displayName: Some Shell Goes Here
+                inputs:
+                  scriptType: bash
+                  scriptLocation: inlineScript
+                  inlineScript: |
+                    set -e
+                    echo
+                    echo "hello final answer ground"
