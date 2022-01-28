@@ -1,0 +1,19 @@
+
+
+# Release Stages
+stages:
+- stage: checking_on_pipeline_api
+  jobs:
+  - job: get_this_launched_using_api
+    steps:
+    - task: Bash@3
+      displayName: 'now lets do some calc'
+      inputs:
+        targetType: inline
+        script: |
+          echo OK start of calculations
+          echo
+          echo "seeing thickness value of -->$thickness<-- "
+      env:
+        thickness: widmanstatten
+
