@@ -67,6 +67,7 @@ stages:
                   # The pipeline is not valid. Job MyDeployment: Step input azureSubscription expects a service connection of type AzureRM but the provided service connection sekhemrekhutawysobekhotep is of type GitHub.
                   #   ##[error]Script failed with error: Error: Input required: connectedServiceNameARM
                   # azureSubscription: kingdomofkush
+                  azureSubscription: 'sekhemrekhutawysobekhotep-public_project-eb51b472-472e-428b-9b8e-fb8c326e375a'
                   scriptLocation: inlineScript
                   inlineScript: |
                     set -e
