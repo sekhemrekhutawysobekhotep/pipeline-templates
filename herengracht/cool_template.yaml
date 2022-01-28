@@ -43,7 +43,7 @@ stages:
                       echo "hello springtime"
 
 
-  - stage: 'Approval not required'
+  - stage: Approval_not_required
     jobs:
     - deployment: 'MyDeployment'
       displayName: MyDeployment
@@ -68,7 +68,7 @@ stages:
                     echo
                     echo "hello middle ground"
 
-  - stage: 'Approval required'
+  - stage: Approval_required
     jobs:
     - deployment: 'MyDeployment2'
       displayName: MyDeployment2
