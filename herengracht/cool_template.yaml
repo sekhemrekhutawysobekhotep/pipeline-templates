@@ -63,7 +63,9 @@ stages:
                 inputs:
                   scriptType: bash
                   # azureSubscription: 'eb51b472-472e-428b-9b8e-fb8c326e375a'
-                  azureSubscription: sekhemrekhutawysobekhotep
+                  # azureSubscription: sekhemrekhutawysobekhotep
+                  # The pipeline is not valid. Job MyDeployment: Step input azureSubscription expects a service connection of type AzureRM but the provided service connection sekhemrekhutawysobekhotep is of type GitHub.
+                  azureSubscription: kingdomofkush
                   scriptLocation: inlineScript
                   inlineScript: |
                     set -e
