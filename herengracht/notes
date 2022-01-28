@@ -1,0 +1,25 @@
+
+this has templates
+
+
+Azure DevOps/Pipelines now has a feature called Environments which supports approvals.
+
+
+https://docs.microsoft.com/en-us/azure/devops/pipelines/process/environments
+
+
+https://docs.microsoft.com/en-us/azure/devops/pipelines/process/environments?view=azure-devops#approvals
+
+https://stackoverflow.com/questions/56176773/how-to-add-a-manual-intervention-step-in-azure-pipelines-yaml
+
+
+.........
+
+
+https://dev.azure.com/sekhemrekhutawysobekhotep/public_project/_environments/4?view=resources
+
+Your environment is ready to use in pipeline YAML environment: hyper_loop_critical
+
+To get full end to end traceability per resource
+
+

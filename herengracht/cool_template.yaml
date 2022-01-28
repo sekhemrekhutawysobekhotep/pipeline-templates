@@ -1,0 +1,64 @@
+
+---
+parameters:
+  - name: download_tf_vars
+    type: string
+    default: 'false'
+  - name: some_parm_01
+    type: string
+    default: ''
+  - name: stens_environment
+    type: string
+    default: hyper_loop_critical
+  - name: some_parm
+    type: string
+    default: 'false'
+
+stages:
+  - stage: ENTRY_point
+    jobs:
+      - deployment: ENTRY_point
+        displayName: ENTRY_point
+        pool:
+          vmImage: 'Ubuntu-latest'
+        environment: ${{ parameters.stens_environment }}
+        continueOnError: 'false'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                # - template: ../steps/foo-setup-steps.yaml
+                #   parameters:
+                #     some_parm_01: ${{ parameters.some_parm_01 }}
+                #     some_parm_02: ${{ parameters.some_parm }}
+
+                - task: AzureCLI@2
+                  displayName: Some Shell Goes Here
+                  inputs:
+                    scriptType: bash
+                    scriptLocation: inlineScript
+                    inlineScript: |
+                      set -e
+                      echo
+                      echo "hello springtime"
+
+
+  - stage: 'Approval not required'
+    jobs:
+    - deployment: 'MyDeployment'
+      displayName: MyDeployment
+      environment: 'ApprovalNotRequired'
+      strategy:
+        runOnce:
+          deploy:
+            # whatever
+
+  - stage: 'Approval required'
+    jobs:
+    - deployment: 'MyDeployment2'
+      displayName: MyDeployment2
+      environment: 'ApprovalRequired'
+      strategy:
+        runOnce:
+          deploy:
+            # whatever
