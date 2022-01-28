@@ -43,3 +43,5 @@ stages:
           echo "seeing thickness value of -->$thickness<-- "
       env:
         thickness: ${{ parameters.thickness }}
+
+- template: herengracht/cool_template.yaml@templates
