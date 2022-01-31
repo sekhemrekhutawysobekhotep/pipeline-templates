@@ -1,0 +1,48 @@
+
+#   https://stackoverflow.com/questions/64286701/tell-if-a-variable-exists-in-template-with-azure-pipelines
+#
+stages:
+- stage: TestVarsCompile
+  variables:
+    - name: state_prefix
+      # $subdirectory is not defined
+      ${{ if eq(variables['subdirectory'], '') }}:
+       value: 'subdirectory-not-set'
+
+      # $subdirectory is defined
+      ${{ if ne(variables['subdirectory'], '') }}:
+       value: 'subdirectory-set'
+
+  jobs:
+   - job:
+     steps:
+     - checkout: none
+     - script: |
+        echo $(subdirectory)
+        echo $(state_prefix)
+
+- stage: TestVarsRuntime
+  variables:
+   state_prefix: $[
+        replace(
+          replace(
+            eq(variables['subdirectory'], ''),
+            True,
+            'sub-directory-not-set'
+          ),
+          False,
+          'sub-directory-set'
+        )
+      ]
+
+  jobs:
+   - job:
+     steps:
+     - checkout: none
+     - script: |
+        echo $(subdirectory)
+        echo $(state_prefix)
+
+
+
+
