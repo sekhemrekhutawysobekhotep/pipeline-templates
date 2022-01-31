@@ -20,3 +20,27 @@ use_runtime_parm
 https://dev.azure.com/sekhemrekhutawysobekhotep/public_project/_build/results?buildId=655&view=logs&j=bf4572ae-18a7-57ed-2f6a-b7d9bb457fe5&t=aa851504-fe7a-5860-ee9d-c464658638ce
 
 
+..........
+
+on first launch after adding environment protected template get this prompt :
+
+Permit access?
+Granting permission here will permit the use of Environment 'hyper_loop_critical' for all waiting and future runs of this pipeline.
+
+
+	... must be some alt which gives similar prompt per launch dunno 
+
+
+...
+
+
+
+https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest#get-an-existing-service-principal
+
+
+https://stackoverflow.com/questions/64286701/tell-if-a-variable-exists-in-template-with-azure-pipelines
+	see pipeline
+runtime_vs_compiletime_variables.yaml
+
+
+
