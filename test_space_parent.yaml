@@ -1,0 +1,6 @@
+
+
+
+- template: test_space_child.yaml
+  parameters:
+    name: foo,bar,baz,neck,arm

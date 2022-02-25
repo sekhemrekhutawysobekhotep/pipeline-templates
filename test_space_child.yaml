@@ -1,0 +1,35 @@
+
+
+parameters:
+  - name: cool_parm
+    displayName: "give a cool comma delimited list"
+    type: string
+    default: ""
+
+
+
+
+# Release Stages
+stages:
+- stage: some_cool_template
+  jobs:
+  - job: launch_template_rwanda
+    steps:
+    - task: Bash@3
+      displayName: 'now lets do some calc'
+      inputs:
+        targetType: inline
+        script: |
+          echo OK start of calculations
+          echo
+
+          # BIG_COMMA_DELIM_LIST="${{ parameters.cool_parm }}"  #  runs oK
+          BIG_COMMA_DELIM_LIST=${{ parameters.cool_parm }}
+          # for REPO in $(echo $BIG_COMMA_DELIM_LIST | sed "s/,/ /g")
+          # for REPO in "$(echo $BIG_COMMA_DELIM_LIST | sed "s/,/ /g")"
+          # for REPO in $(echo "$BIG_COMMA_DELIM_LIST" | sed "s/,/ /g") # ***REMOVED***
+          for REPO in $(echo $BIG_COMMA_DELIM_LIST | sed "s/,/ /g")
+          do
+            echo "here is one parm $REPO"
+            echo "${REPO##*/}"
+          done
