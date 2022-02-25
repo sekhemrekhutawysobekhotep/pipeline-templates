@@ -1,6 +1,6 @@
+---
 
-
-
+stages:
 - template: test_space_child.yaml
   parameters:
     cool_parm: foo
