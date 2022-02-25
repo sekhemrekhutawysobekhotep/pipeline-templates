@@ -11,6 +11,7 @@ steps:
     inputs:
       scriptType: bash
       scriptLocation: inlineScript
+      azureSubscription: 'sekhemrekhutawysobekhotep-public_project-eb51b472-472e-428b-9b8e-fb8c326e375a'
       inlineScript: |
         BIG_COMMA_DELIM_LIST=${{ parameters.cool_parm }}
         for REPO in $(echo $BIG_COMMA_DELIM_LIST | sed "s/,/ /g")
