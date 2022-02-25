@@ -20,10 +20,11 @@ stages:
           echo OK start of calculations
           echo
 
-          BIG_COMMA_DELIM_LIST="${{ parameters.cool_parm }}"
+          BIG_COMMA_DELIM_LIST="${{ parameters.cool_parm }}"  #  runs oK 
           # for REPO in $(echo $BIG_COMMA_DELIM_LIST | sed "s/,/ /g")
           # for REPO in "$(echo $BIG_COMMA_DELIM_LIST | sed "s/,/ /g")"
-          for REPO in $(echo "$BIG_COMMA_DELIM_LIST" | sed "s/,/ /g")
+          # for REPO in $(echo "$BIG_COMMA_DELIM_LIST" | sed "s/,/ /g") # ***REMOVED***
+          for REPO in $(echo $BIG_COMMA_DELIM_LIST | sed "s/,/ /g")
           do
             echo "here is one parm $REPO"
             echo "${REPO##*/}"
