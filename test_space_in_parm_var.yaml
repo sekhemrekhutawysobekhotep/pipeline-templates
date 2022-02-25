@@ -17,16 +17,13 @@ stages:
       inputs:
         targetType: inline
         script: |
-          echo OK start of calculations 
+          echo OK start of calculations
           echo
 
           BIG_COMMA_DELIM_LIST=${{ parameters.cool_parm }}
-          for REPO in $(echo $BIG_COMMA_DELIM_LIST | sed "s/,/ /g")
+          # for REPO in $(echo $BIG_COMMA_DELIM_LIST | sed "s/,/ /g")
+          for REPO in "$(echo $BIG_COMMA_DELIM_LIST | sed "s/,/ /g")"
           do
             echo "here is one parm $REPO"
-            echo ${REPO##*/}
+            echo "${REPO##*/}"
           done
-
-
-
-
