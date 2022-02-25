@@ -3,7 +3,7 @@ parameters:
   - name: cool_parm
     displayName: "give a cool comma delimited list"
     type: string
-    default: ""
+    default: "foo, bar,baz  neck arm "
 
 
 # Release Stages
