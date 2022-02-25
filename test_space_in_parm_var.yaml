@@ -5,19 +5,20 @@ parameters:
     type: string
     default: ""
 
-steps:
-  - task: AzureCLI@2
-    displayName: 'test_space_in_parm'
-    inputs:
-      scriptType: bash
-      scriptLocation: inlineScript
-      azureSubscription: 'sekhemrekhutawysobekhotep-public_project-eb51b472-472e-428b-9b8e-fb8c326e375a'
-      inlineScript: |
-        BIG_COMMA_DELIM_LIST=${{ parameters.cool_parm }}
-        for REPO in $(echo $BIG_COMMA_DELIM_LIST | sed "s/,/ /g")
-        do
-          echo "here is one parm $REPO"
-          echo ${REPO##*/}
-        done
+
+# Release Stages
+stages:
+- stage: some_cool_template
+  jobs:
+  - job: launch_template_rwanda
+    steps:
+    - task: Bash@3
+      displayName: 'now lets do some calc'
+      inputs:
+        targetType: inline
+        script: |
+          echo OK start of calculations 
+          echo
+
 
 
