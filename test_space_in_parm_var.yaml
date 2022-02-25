@@ -20,7 +20,8 @@ stages:
           echo OK start of calculations
           echo
 
-          BIG_COMMA_DELIM_LIST="${{ parameters.cool_parm }}"  #  runs oK 
+          # BIG_COMMA_DELIM_LIST="${{ parameters.cool_parm }}"  #  runs oK
+          BIG_COMMA_DELIM_LIST=${{ parameters.cool_parm }}
           # for REPO in $(echo $BIG_COMMA_DELIM_LIST | sed "s/,/ /g")
           # for REPO in "$(echo $BIG_COMMA_DELIM_LIST | sed "s/,/ /g")"
           # for REPO in $(echo "$BIG_COMMA_DELIM_LIST" | sed "s/,/ /g") # ***REMOVED***
