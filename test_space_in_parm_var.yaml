@@ -1,0 +1,22 @@
+
+parameters:
+  - name: cool_parm
+    displayName: "give a cool comma delimited list"
+    type: string
+    default: ""
+
+steps:
+  - task: AzureCLI@2
+    displayName: 'test_space_in_parm'
+    inputs:
+      scriptType: bash
+      scriptLocation: inlineScript
+      inlineScript: |
+        BIG_COMMA_DELIM_LIST=${{ parameters.cool_parm }}
+        for REPO in $(echo $BIG_COMMA_DELIM_LIST | sed "s/,/ /g")
+        do
+          echo "here is one parm $REPO"
+          echo ${REPO##*/}
+        done
+
+
