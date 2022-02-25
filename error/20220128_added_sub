@@ -1,0 +1,42 @@
+
+
+pipeline run errored on
+
+Your CLI is up-to-date.
+Setting AZURE_CONFIG_DIR env variable to: /home/vsts/work/_temp/.azclitask
+##[error]Script failed with error: Error: Input required: connectedServiceNameARM
+Finishing: Some Shell Goes Here
+
+
+https://dev.azure.com/sekhemrekhutawysobekhotep/public_project/_build/results?buildId=679&view=logs&j=a640d339-40d0-5c50-6bc4-9d1e4d9eacde&t=190cbb77-ff38-52ce-86e4-7f537769f58a
+
+so I added my sub as per
+
+              - task: AzureCLI@2
+                displayName: Some Shell Goes Here
+                inputs:
+                  scriptType: bash
+                  azureSubscription: 'eb51b472-472e-428b-9b8e-fb8c326e375a'
+                  scriptLocation: inlineScript
+                  inlineScript: |
+                    set -e
+                    echo
+                    echo "hello middle ground"
+
+now on new launch get
+
+There was a resource authorization issue: "The pipeline is not valid. Job MyDeployment: Step input azureSubscription references service connection eb51b472-472e-428b-9b8e-fb8c326e375a which could not be found. The service connection does not exist or has not been authorized for use. For authorization details, refer to https://aka.ms/yamlauthz."
+
+
+https://dev.azure.com/sekhemrekhutawysobekhotep/public_project/_build/results?buildId=683&view=results
+
+
+Resources were successfully authorized
+
+
+
+The pipeline is not valid. Job MyDeployment: Step input azureSubscription expects a service connection of type AzureRM but the provided service connection sekhemrekhutawysobekhotep is of type GitHub.
+
+https://dev.azure.com/sekhemrekhutawysobekhotep/public_project/_build/results?buildId=688&view=results
+
+

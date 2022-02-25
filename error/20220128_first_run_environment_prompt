@@ -1,0 +1,12 @@
+
+##[error]Script failed with error: Error: Input required: connectedServiceNameARM
+
+https://dev.azure.com/sekhemrekhutawysobekhotep/public_project/_build/results?buildId=679&view=logs&j=a640d339-40d0-5c50-6bc4-9d1e4d9eacde&t=190cbb77-ff38-52ce-86e4-7f537769f58a
+
+
+
+
+when U create an environment it give tracking ability which in turn requires mention of 
+	azureSubscription
+
+	in the steps 
