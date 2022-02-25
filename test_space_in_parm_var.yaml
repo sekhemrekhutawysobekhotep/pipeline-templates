@@ -20,5 +20,13 @@ stages:
           echo OK start of calculations 
           echo
 
+          BIG_COMMA_DELIM_LIST=${{ parameters.cool_parm }}
+          for REPO in $(echo $BIG_COMMA_DELIM_LIST | sed "s/,/ /g")
+          do
+            echo "here is one parm $REPO"
+            echo ${REPO##*/}
+          done
+
+
 
 
