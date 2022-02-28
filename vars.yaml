@@ -1,6 +1,8 @@
 
 variables:
   favoriteVeggie: 'brussels sprouts'
+  - name: environment
+    value: ${{ parameters.environment }}
 
 parameters:
   - name: environment
