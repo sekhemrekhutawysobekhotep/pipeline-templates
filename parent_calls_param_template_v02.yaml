@@ -3,8 +3,8 @@ variables:
 - template: vars.yaml  # Template reference
 
 
-parameters:
-- template: parm_templ.yaml  # Template reference
+# parameters:
+# - template: parm_templ.yaml  # Template reference
 
 
 steps:
