@@ -1,0 +1,13 @@
+
+variables:
+  favoriteVeggie: 'brussels sprouts'
+
+parameters:
+  - name: environment
+    displayName: Environment
+    type: string
+    default: dev
+    values:
+      - dev
+      - stg
+

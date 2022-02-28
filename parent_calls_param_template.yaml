@@ -1,0 +1,8 @@
+
+variables:
+- template: vars.yaml  # Template reference
+
+steps:
+- script: echo My favorite ***REMOVED*** is ${{ variables.favoriteVeggie }}.
+
+
