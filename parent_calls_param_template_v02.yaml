@@ -1,0 +1,14 @@
+
+variables:
+- template: vars.yaml  # Template reference
+
+
+parameters:
+- template: parm_templ.yaml  # Template reference
+
+
+steps:
+- script: echo My favorite vegetable is ${{ variables.favoriteVeggie }}
+- script: echo My favorite environment is ${{ variables.environment }}
+
+
