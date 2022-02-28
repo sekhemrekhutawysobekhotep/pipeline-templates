@@ -1,5 +1,7 @@
 
 variables:
+  - name: project
+    value: some_project
 - template: vars.yaml  # Template reference
 
 
@@ -10,5 +12,6 @@ variables:
 steps:
 - script: echo My favorite vegetable is ${{ variables.favoriteVeggie }}
 - script: echo My favorite environment is ${{ variables.environment }}
+- script: echo My favorite project is ${{ variables.project }}
 
 
