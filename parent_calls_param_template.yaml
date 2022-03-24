@@ -3,7 +3,5 @@ variables:
 - template: vars.yaml  # Template reference
 
 steps:
-- script: echo My favorite foo is ${{ variables.favoriteVeggie }}
+- script: echo My favorite ***REMOVED*** is ${{ variables.favoriteVeggie }}
 - script: echo My favorite environment is ${{ variables.environment }}
-
-
