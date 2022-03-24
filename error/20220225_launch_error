@@ -1,0 +1,7 @@
+
+
+There was a resource authorization issue: "The pipeline is not valid. Job Job: Step AzureCLI input connectedServiceNameARM references service connection sekhemrekhutawysobekhotep-public_project-eb51b472-472e-428b-9b8e-fb8c326e375a which could not be found. The service connection does not exist or has not been authorized for use. For authorization details, refer to https://aka.ms/yamlauthz."
+
+https://dev.azure.com/sekhemrekhutawysobekhotep/public_project/_build/results?buildId=745&view=results
+
+
