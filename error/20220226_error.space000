@@ -1,0 +1,33 @@
+
+now lets do some calc
+
+Starting: now lets do some calc
+==============================================================================
+Task         : Bash
+Description  : Run a Bash script on macOS, Linux, or Windows
+Version      : 3.198.0
+Author       : Microsoft Corporation
+Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/bash
+==============================================================================
+Generating script.
+========================== Starting Command Output ===========================
+/usr/bin/bash /home/vsts/work/_temp/f5edc81e-f0ff-4fe0-83f5-363df5d57f7d.sh
+OK start of calculations
+
+/home/vsts/work/_temp/f5edc81e-f0ff-4fe0-83f5-363df5d57f7d.sh: line 4: bar,baz: command not found
+Finishing: now lets do some calc
+
+
+
+https://dev.azure.com/sekhemrekhutawysobekhotep/public_project/_build/results?buildId=759&view=logs&j=31e0a65e-b3f0-5eb0-8d0a-15a2530340ec&t=bb044a8a-7c80-5775-3c93-f233af567bd5
+
+
+	............
+
+here is launch UI parm value
+
+
+give a cool comma delimited list
+foo, bar,baz  neck 
+
+
